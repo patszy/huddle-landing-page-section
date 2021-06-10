@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* - [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/) */
+
+:root {
+    --color-violet: hsl(257, 40%, 49%);
+    --color-soft-magneta: hsl(300, 69%, 71%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background: url("../images/bg-desktop.svg"), var(--color-violet);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20vh;
+    padding-left: 4rem;
+}
+
+header svg {
+    width: 10rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    height: 65vh;
+    padding: 0 4rem;
+}
+
+main img {
+    width: 50%;
+}
+
+.content {
+    width: 45%;
+    padding: 4rem 0 4rem 4rem;
+}
+
+.content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.content p {
+    margin-bottom: 2rem;
+    font-size: .8rem;
+}
+
+button {
+    padding: 1rem 3.5rem;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 0 3rem rgba(0,0,0,.3);
+    color: var(--color-violet);
+    font-size: .9rem;
+}
+
+button:hover {
+    background-color: var(--color-soft-magneta);
+    color: white;
+}
+
+.social svg {
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: .5rem;
+    width: 32px;
+    margin-right: .7rem;
+}
+
+footer {
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
+    font-size: .7rem;
+    animation: fadeIn 1s;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-image: url("../images/bg-mobile.svg");
+    }
+
+    main {
+        flex-direction: column;
+        height: unset;
+    }
+
+    main img {
+        width: 85vw;
+    }
+
+    .content {
+        width: 70vw;
+        text-align: center;
+        padding: 4rem 0 0;
+    }
+
+    footer p {
+        display: none;
+    }
+
+    footer {
+        justify-content: center;
+        height: unset;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    html {
+        font-size: 4vw;
+    }
+
+    .social svg{
+        width: 2rem;
+    }
+}
